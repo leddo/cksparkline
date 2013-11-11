@@ -12,6 +12,9 @@
 
     // Set the line color
     self.sparkline.lineColor = [UIColor blackColor];
+
+    // set the fill color
+    self.sparkline.fillColor = [UIColor lightGrayColor];
     
     // Set the line width
     self.sparkline.lineWidth = 2.0;

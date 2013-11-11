@@ -101,10 +101,14 @@
     [self updateBoundary];
     
     if (self.drawArea) {
-        UIColor *displayColorInstance = [UIColor colorWithCGColor:displayColor];
-        UIColor *areaColor = [displayColorInstance colorWithAlphaComponent:0.4];
-        
-        CGContextSetFillColorWithColor(context, [areaColor CGColor]);
+        CGColorRef areaColor;
+        if (self.fillColor) {
+            areaColor = [self.fillColor CGColor];
+        } else {
+            UIColor *displayColorInstance = [UIColor colorWithCGColor:displayColor];
+            areaColor = [[displayColorInstance colorWithAlphaComponent:0.4] CGColor];
+        }
+        CGContextSetFillColorWithColor(context, areaColor);
         [self drawAreaInRect:rect withContext:context];
     }
     

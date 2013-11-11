@@ -43,6 +43,7 @@ static inline CGPoint calculatePosition(NSArray *data, int index, CKBoundary *bo
 @property (readonly) BOOL selected;
 @property (nonatomic, retain) UIColor *lineColor;
 @property (nonatomic, retain) UIColor *highlightedLineColor;
+@property (nonatomic, retain) UIColor *fillColor;
 @property (nonatomic) CGFloat lineWidth;
 @property (nonatomic) BOOL drawPoints;
 @property (nonatomic) BOOL drawArea;
